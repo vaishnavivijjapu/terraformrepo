@@ -20,7 +20,7 @@ resource "aws_instance" "Test-Server" {
 
 resource "aws_key_pair" "terraform_ec2_key" {
 	key_name = "key"
-	public_key = "${file("key.pub")}"
+	public_key = "${file("key.pem")}"
 }
 
 #### file ends here ####
