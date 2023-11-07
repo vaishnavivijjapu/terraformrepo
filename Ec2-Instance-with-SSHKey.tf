@@ -15,12 +15,12 @@ provider "aws" {
 resource "aws_instance" "Test-Server" {
   ami           = "ami-05c13eab67c5d8861"
   instance_type = "t2.micro"
-  key_name = "key"
+  key_name = "newkey"
 }
 
 resource "aws_key_pair" "terraform_ec2_key" {
-	key_name = "key"
-	public_key = "${file("key.pem")}"
+	key_name = "newkey"
+	public_key = "${file("newkey.pem")}"
 }
 
 #### file ends here ####
